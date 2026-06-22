@@ -68,10 +68,6 @@ while (number > 0) {
 
 // console.log(`count ${count}, number = ${originalNumber}`);
 
-/*
-    
-*/
-
 if (sum === originalNumber) {
   console.log(`${originalNumber} is an Armstrong number`);
 } else {
