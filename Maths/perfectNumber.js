@@ -22,7 +22,7 @@
 
 */
 
-let number = 28,
+let number = 12,
   sumOfProperDivisors = 1;
 
 for (let i = 2; i * i <= number; i++) {
@@ -31,6 +31,7 @@ for (let i = 2; i * i <= number; i++) {
     if (i !== number / i) {
       // pairing officer
       sumOfProperDivisors += number / i;
+      if (sumOfProperDivisors > number) break; // extra loop iteration
     }
   }
 }
