@@ -10,11 +10,29 @@
 
 */
 
-let num = 1,
+let num = 227,
   isPrime = true,
   count = 0;
 
-for (let i = 2; i < num; i++) {
+// for (let i = 2; i < num; i++) {
+//   if (num % i == 0) {
+//     console.log(`i = ${i}`);
+//     isPrime = false;
+//     break;
+//   }
+//   count++;
+// }
+
+// console.log(num, isPrime ? "Prime" : "Not Prime", count);
+
+/* 
+    Time Complexity = O(n) ==> loop will run for (n-2) times --> O(n)
+    Space Compelxity = O(1)
+*/
+
+for (let i = 2; i * i < num; i++) {
+  console.log(i);
+
   if (num % i == 0) {
     console.log(`i = ${i}`);
     isPrime = false;
@@ -26,6 +44,6 @@ for (let i = 2; i < num; i++) {
 console.log(num, isPrime ? "Prime" : "Not Prime", count);
 
 /* 
-    Time Complexity = O(n) ==> loop will run for (n-2) times --> O(n)
+    Time Complexity = O(√n) ==> loop will run for (√n)
     Space Compelxity = O(1)
 */
