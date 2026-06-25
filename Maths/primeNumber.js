@@ -10,7 +10,7 @@
 
 */
 
-let num = 227,
+let num = 98,
   isPrime = true,
   count = 0;
 
@@ -30,11 +30,12 @@ let num = 227,
     Space Compelxity = O(1)
 */
 
-for (let i = 2; i * i < num; i++) {
-  console.log(i);
+if (num < 2) {
+  isPrime = false;
+}
 
+for (let i = 2; i * i <= num; i++) {
   if (num % i == 0) {
-    console.log(`i = ${i}`);
     isPrime = false;
     break;
   }
