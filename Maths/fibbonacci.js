@@ -18,20 +18,38 @@
     Space Complexity = O(n) ===> depends array length
 */
 
-let n = 10,
-  firstTerm = 0,
-  secondTerm = 1,
-  nextSum = 0;
+// let n = 10,
+//   firstTerm = 0,
+//   secondTerm = 1,
+//   nextSum = 0;
 
-for (let i = 0; i < n; i++) {
-  console.log(nextSum);
-  nextSum = firstTerm + secondTerm;
+// for (let i = 0; i < n; i++) {
+//   console.log(nextSum);
+//   nextSum = firstTerm + secondTerm;
 
-  secondTerm = firstTerm;
-  firstTerm = nextSum;
-}
+//   secondTerm = firstTerm;
+//   firstTerm = nextSum;
+// }
 
 /* 
   Time Complexity = O(n)
   Space Complexity = O(1)
+*/
+
+let n = 10,
+  firstTerm = 0,
+  secondTerm = 1;
+
+for (let i = 0; i < n; i++) {
+  secondTerm = firstTerm + secondTerm;
+  [firstTerm, secondTerm] = [secondTerm, firstTerm];
+
+  console.log(secondTerm);
+}
+
+/*  
+  Swapping with the numbers.
+
+  Time Complexity = O(n)
+  Space Complexity = O(1) 
 */
